@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.plyaljx.dao.PtnTrxDatMapper">
+  <resultMap id="BaseResultMap" type="com.plyaljx.entity.PtnTrxDat">
+    <id column="TRX_TRX_SEQ" jdbcType="CHAR" property="trxTrxSeq" />
+    <result column="TRX_TRX_DAT" jdbcType="DECIMAL" property="trxTrxDat" />
+    <result column="TRX_TRX_TIM" jdbcType="DECIMAL" property="trxTrxTim" />
+    <result column="TRX_MCH_NBR" jdbcType="CHAR" property="trxMchNbr" />
+    <result column="TRX_MCH_OUT" jdbcType="CHAR" property="trxMchOut" />
+    <result column="TRX_MCH_SUB" jdbcType="CHAR" property="trxMchSub" />
+    <result column="TRX_CTF_TYP" jdbcType="CHAR" property="trxCtfTyp" />
+    <result column="TRX_CTF_NBR" jdbcType="CHAR" property="trxCtfNbr" />
+    <result column="TRX_CUR_NBR" jdbcType="CHAR" property="trxCurNbr" />
+    <result column="TRX_CTF_NAM" jdbcType="CHAR" property="trxCtfNam" />
+    <result column="TRX_ORD_DAT" jdbcType="DECIMAL" property="trxOrdDat" />
+    <result column="TRX_ORD_TIM" jdbcType="DECIMAL" property="trxOrdTim" />
+    <result column="TRX_ORD_SEQ" jdbcType="CHAR" property="trxOrdSeq" />
+    <result column="TRX_ORD_AMT" jdbcType="DECIMAL" property="trxOrdAmt" />
+    <result column="TRX_ORD_RSV" jdbcType="VARCHAR" property="trxOrdRsv" />
+    <result column="TRX_CAD_NBR" jdbcType="CHAR" property="trxCadNbr" />
+    <result column="TRX_CAD_BKN" jdbcType="CHAR" property="trxCadBkn" />
+    <result column="TRX_CAD_DBT" jdbcType="CHAR" property="trxCadDbt" />
+    <result column="TRX_CAD_ACT" jdbcType="CHAR" property="trxCadAct" />
+    <result column="TRX_TRX_CCY" jdbcType="CHAR" property="trxTrxCcy" />
+    <result column="TRX_TRX_AMT" jdbcType="DECIMAL" property="trxTrxAmt" />
+    <result column="TRX_TRX_SYS" jdbcType="CHAR" property="trxTrxSys" />
+    <result column="TRX_TRX_SCN" jdbcType="CHAR" property="trxTrxScn" />
+    <result column="TRX_TRX_TYP" jdbcType="CHAR" property="trxTrxTyp" />
+    <result column="TRX_TRX_STS" jdbcType="CHAR" property="trxTrxSts" />
+    <result column="TRX_TRX_ECD" jdbcType="CHAR" property="trxTrxEcd" />
+    <result column="TRX_TRX_RSQ" jdbcType="CHAR" property="trxTrxRsq" />
+    <result column="TRX_TRX_RPN" jdbcType="CHAR" property="trxTrxRpn" />
+    <result column="TRX_TRX_NTF" jdbcType="CHAR" property="trxTrxNtf" />
+    <result column="TRX_TRX_MRC" jdbcType="CHAR" property="trxTrxMrc" />
+    <result column="TRX_TRX_APD" jdbcType="CHAR" property="trxTrxApd" />
+    <result column="TRX_RFA_AMT" jdbcType="DECIMAL" property="trxRfaAmt" />
+    <result column="TRX_RFA_SUM" jdbcType="DECIMAL" property="trxRfaSum" />
+    <result column="TRX_RFA_SEQ" jdbcType="CHAR" property="trxRfaSeq" />
+    <result column="TRX_RFA_NBR" jdbcType="CHAR" property="trxRfaNbr" />
+    <result column="TRX_RFA_MOD" jdbcType="CHAR" property="trxRfaMod" />
+    <result column="TRX_RFA_MSG" jdbcType="CHAR" property="trxRfaMsg" />
+    <result column="TRX_RFA_CLR" jdbcType="DECIMAL" property="trxRfaClr" />
+    <result column="TRX_RFA_DSC" jdbcType="DECIMAL" property="trxRfaDsc" />
+    <result column="TRX_RFA_CPN" jdbcType="DECIMAL" property="trxRfaCpn" />
+    <result column="TRX_RFA_ITG" jdbcType="DECIMAL" property="trxRfaItg" />
+    <result column="TRX_RFA_FEE" jdbcType="DECIMAL" property="trxRfaFee" />
+    <result column="TRX_RFA_MDL" jdbcType="CHAR" property="trxRfaMdl" />
+    <result column="TRX_CLR_INS" jdbcType="CHAR" property="trxClrIns" />
+    <result column="TRX_CLR_DAT" jdbcType="DECIMAL" property="trxClrDat" />
+    <result column="TRX_CLR_BBK" jdbcType="CHAR" property="trxClrBbk" />
+    <result column="TRX_CLR_BRN" jdbcType="CHAR" property="trxClrBrn" />
+    <result column="TRX_CLR_PMT" jdbcType="CHAR" property="trxClrPmt" />
+    <result column="TRX_CLR_AMT" jdbcType="DECIMAL" property="trxClrAmt" />
+    <result column="TRX_FEE_AMT" jdbcType="DECIMAL" property="trxFeeAmt" />
+    <result column="TRX_PWD_IGN" jdbcType="CHAR" property="trxPwdIgn" />
+    <result column="TRX_CPN_PNB" jdbcType="CHAR" property="trxCpnPnb" />
+    <result column="TRX_CPN_GRP" jdbcType="CHAR" property="trxCpnGrp" />
+    <result column="TRX_CPN_GNB" jdbcType="CHAR" property="trxCpnGnb" />
+    <result column="TRX_CPN_NBR" jdbcType="CHAR" property="trxCpnNbr" />
+    <result column="TRX_CPN_AMT" jdbcType="DECIMAL" property="trxCpnAmt" />
+    <result column="TRX_DSC_PNB" jdbcType="CHAR" property="trxDscPnb" />
+    <result column="TRX_DSC_GRP" jdbcType="CHAR" property="trxDscGrp" />
+    <result column="TRX_DSC_GNB" jdbcType="CHAR" property="trxDscGnb" />
+    <result column="TRX_DSC_AMT" jdbcType="DECIMAL" property="trxDscAmt" />
+    <result column="TRX_ITG_AMT" jdbcType="DECIMAL" property="trxItgAmt" />
+    <result column="TRX_AUT_CNL" jdbcType="CHAR" property="trxAutCnl" />
+    <result column="TRX_AUT_DAT" jdbcType="DECIMAL" property="trxAutDat" />
+    <result column="TRX_AUT_TIM" jdbcType="DECIMAL" property="trxAutTim" />
+    <result column="TRX_AUT_SEQ" jdbcType="CHAR" property="trxAutSeq" />
+    <result column="TRX_AUT_RUT" jdbcType="CHAR" property="trxAutRut" />
+    <result column="TRX_AUT_CN2" jdbcType="CHAR" property="trxAutCn2" />
+    <result column="TRX_AUT_DA2" jdbcType="DECIMAL" property="trxAutDa2" />
+    <result column="TRX_AUT_TI2" jdbcType="DECIMAL" property="trxAutTi2" />
+    <result column="TRX_AUT_SE2" jdbcType="CHAR" property="trxAutSe2" />
+    <result column="TRX_AUT_RU2" jdbcType="CHAR" property="trxAutRu2" />
+    <result column="TRX_CMT_STS" jdbcType="CHAR" property="trxCmtSts" />
+    <result column="TRX_CMT_COD" jdbcType="CHAR" property="trxCmtCod" />
+    <result column="TRX_PTN_NBR" jdbcType="CHAR" property="trxPtnNbr" />
+    <result column="TRX_SPC_120" jdbcType="CHAR" property="trxSpc120" />
+    <result column="TRX_REQ_SEQ" jdbcType="CHAR" property="trxReqSeq" />
+    <result column="TRX_DTB_NAM" jdbcType="CHAR" property="trxDtbNam" />
+    <result column="TRX_MNT_DAT" jdbcType="DECIMAL" property="trxMntDat" />
+    <result column="TRX_MNT_TIM" jdbcType="DECIMAL" property="trxMntTim" />
+    <result column="TRX_RCD_VER" jdbcType="DECIMAL" property="trxRcdVer" />
+    <result column="TRX_RCD_STS" jdbcType="CHAR" property="trxRcdSts" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    TRX_TRX_SEQ, TRX_TRX_DAT, TRX_TRX_TIM, TRX_MCH_NBR, TRX_MCH_OUT, TRX_MCH_SUB, TRX_CTF_TYP, 
+    TRX_CTF_NBR, TRX_CUR_NBR, TRX_CTF_NAM, TRX_ORD_DAT, TRX_ORD_TIM, TRX_ORD_SEQ, TRX_ORD_AMT, 
+    TRX_ORD_RSV, TRX_CAD_NBR, TRX_CAD_BKN, TRX_CAD_DBT, TRX_CAD_ACT, TRX_TRX_CCY, TRX_TRX_AMT, 
+    TRX_TRX_SYS, TRX_TRX_SCN, TRX_TRX_TYP, TRX_TRX_STS, TRX_TRX_ECD, TRX_TRX_RSQ, TRX_TRX_RPN, 
+    TRX_TRX_NTF, TRX_TRX_MRC, TRX_TRX_APD, TRX_RFA_AMT, TRX_RFA_SUM, TRX_RFA_SEQ, TRX_RFA_NBR, 
+    TRX_RFA_MOD, TRX_RFA_MSG, TRX_RFA_CLR, TRX_RFA_DSC, TRX_RFA_CPN, TRX_RFA_ITG, TRX_RFA_FEE, 
+    TRX_RFA_MDL, TRX_CLR_INS, TRX_CLR_DAT, TRX_CLR_BBK, TRX_CLR_BRN, TRX_CLR_PMT, TRX_CLR_AMT, 
+    TRX_FEE_AMT, TRX_PWD_IGN, TRX_CPN_PNB, TRX_CPN_GRP, TRX_CPN_GNB, TRX_CPN_NBR, TRX_CPN_AMT, 
+    TRX_DSC_PNB, TRX_DSC_GRP, TRX_DSC_GNB, TRX_DSC_AMT, TRX_ITG_AMT, TRX_AUT_CNL, TRX_AUT_DAT, 
+    TRX_AUT_TIM, TRX_AUT_SEQ, TRX_AUT_RUT, TRX_AUT_CN2, TRX_AUT_DA2, TRX_AUT_TI2, TRX_AUT_SE2, 
+    TRX_AUT_RU2, TRX_CMT_STS, TRX_CMT_COD, TRX_PTN_NBR, TRX_SPC_120, TRX_REQ_SEQ, TRX_DTB_NAM, 
+    TRX_MNT_DAT, TRX_MNT_TIM, TRX_RCD_VER, TRX_RCD_STS
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ptn_trx_dat
+    where TRX_TRX_SEQ = #{trxTrxSeq,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from ptn_trx_dat
+    where TRX_TRX_SEQ = #{trxTrxSeq,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.plyaljx.entity.PtnTrxDat">
+    insert into ptn_trx_dat (TRX_TRX_SEQ, TRX_TRX_DAT, TRX_TRX_TIM, 
+      TRX_MCH_NBR, TRX_MCH_OUT, TRX_MCH_SUB, 
+      TRX_CTF_TYP, TRX_CTF_NBR, TRX_CUR_NBR, 
+      TRX_CTF_NAM, TRX_ORD_DAT, TRX_ORD_TIM, 
+      TRX_ORD_SEQ, TRX_ORD_AMT, TRX_ORD_RSV, 
+      TRX_CAD_NBR, TRX_CAD_BKN, TRX_CAD_DBT, 
+      TRX_CAD_ACT, TRX_TRX_CCY, TRX_TRX_AMT, 
+      TRX_TRX_SYS, TRX_TRX_SCN, TRX_TRX_TYP, 
+      TRX_TRX_STS, TRX_TRX_ECD, TRX_TRX_RSQ, 
+      TRX_TRX_RPN, TRX_TRX_NTF, TRX_TRX_MRC, 
+      TRX_TRX_APD, TRX_RFA_AMT, TRX_RFA_SUM, 
+      TRX_RFA_SEQ, TRX_RFA_NBR, TRX_RFA_MOD, 
+      TRX_RFA_MSG, TRX_RFA_CLR, TRX_RFA_DSC, 
+      TRX_RFA_CPN, TRX_RFA_ITG, TRX_RFA_FEE, 
+      TRX_RFA_MDL, TRX_CLR_INS, TRX_CLR_DAT, 
+      TRX_CLR_BBK, TRX_CLR_BRN, TRX_CLR_PMT, 
+      TRX_CLR_AMT, TRX_FEE_AMT, TRX_PWD_IGN, 
+      TRX_CPN_PNB, TRX_CPN_GRP, TRX_CPN_GNB, 
+      TRX_CPN_NBR, TRX_CPN_AMT, TRX_DSC_PNB, 
+      TRX_DSC_GRP, TRX_DSC_GNB, TRX_DSC_AMT, 
+      TRX_ITG_AMT, TRX_AUT_CNL, TRX_AUT_DAT, 
+      TRX_AUT_TIM, TRX_AUT_SEQ, TRX_AUT_RUT, 
+      TRX_AUT_CN2, TRX_AUT_DA2, TRX_AUT_TI2, 
+      TRX_AUT_SE2, TRX_AUT_RU2, TRX_CMT_STS, 
+      TRX_CMT_COD, TRX_PTN_NBR, TRX_SPC_120, 
+      TRX_REQ_SEQ, TRX_DTB_NAM, TRX_MNT_DAT, 
+      TRX_MNT_TIM, TRX_RCD_VER, TRX_RCD_STS
+      )
+    values (#{trxTrxSeq,jdbcType=CHAR}, #{trxTrxDat,jdbcType=DECIMAL}, #{trxTrxTim,jdbcType=DECIMAL}, 
+      #{trxMchNbr,jdbcType=CHAR}, #{trxMchOut,jdbcType=CHAR}, #{trxMchSub,jdbcType=CHAR}, 
+      #{trxCtfTyp,jdbcType=CHAR}, #{trxCtfNbr,jdbcType=CHAR}, #{trxCurNbr,jdbcType=CHAR}, 
+      #{trxCtfNam,jdbcType=CHAR}, #{trxOrdDat,jdbcType=DECIMAL}, #{trxOrdTim,jdbcType=DECIMAL}, 
+      #{trxOrdSeq,jdbcType=CHAR}, #{trxOrdAmt,jdbcType=DECIMAL}, #{trxOrdRsv,jdbcType=VARCHAR}, 
+      #{trxCadNbr,jdbcType=CHAR}, #{trxCadBkn,jdbcType=CHAR}, #{trxCadDbt,jdbcType=CHAR}, 
+      #{trxCadAct,jdbcType=CHAR}, #{trxTrxCcy,jdbcType=CHAR}, #{trxTrxAmt,jdbcType=DECIMAL}, 
+      #{trxTrxSys,jdbcType=CHAR}, #{trxTrxScn,jdbcType=CHAR}, #{trxTrxTyp,jdbcType=CHAR}, 
+      #{trxTrxSts,jdbcType=CHAR}, #{trxTrxEcd,jdbcType=CHAR}, #{trxTrxRsq,jdbcType=CHAR}, 
+      #{trxTrxRpn,jdbcType=CHAR}, #{trxTrxNtf,jdbcType=CHAR}, #{trxTrxMrc,jdbcType=CHAR}, 
+      #{trxTrxApd,jdbcType=CHAR}, #{trxRfaAmt,jdbcType=DECIMAL}, #{trxRfaSum,jdbcType=DECIMAL}, 
+      #{trxRfaSeq,jdbcType=CHAR}, #{trxRfaNbr,jdbcType=CHAR}, #{trxRfaMod,jdbcType=CHAR}, 
+      #{trxRfaMsg,jdbcType=CHAR}, #{trxRfaClr,jdbcType=DECIMAL}, #{trxRfaDsc,jdbcType=DECIMAL}, 
+      #{trxRfaCpn,jdbcType=DECIMAL}, #{trxRfaItg,jdbcType=DECIMAL}, #{trxRfaFee,jdbcType=DECIMAL}, 
+      #{trxRfaMdl,jdbcType=CHAR}, #{trxClrIns,jdbcType=CHAR}, #{trxClrDat,jdbcType=DECIMAL}, 
+      #{trxClrBbk,jdbcType=CHAR}, #{trxClrBrn,jdbcType=CHAR}, #{trxClrPmt,jdbcType=CHAR}, 
+      #{trxClrAmt,jdbcType=DECIMAL}, #{trxFeeAmt,jdbcType=DECIMAL}, #{trxPwdIgn,jdbcType=CHAR}, 
+      #{trxCpnPnb,jdbcType=CHAR}, #{trxCpnGrp,jdbcType=CHAR}, #{trxCpnGnb,jdbcType=CHAR}, 
+      #{trxCpnNbr,jdbcType=CHAR}, #{trxCpnAmt,jdbcType=DECIMAL}, #{trxDscPnb,jdbcType=CHAR}, 
+      #{trxDscGrp,jdbcType=CHAR}, #{trxDscGnb,jdbcType=CHAR}, #{trxDscAmt,jdbcType=DECIMAL}, 
+      #{trxItgAmt,jdbcType=DECIMAL}, #{trxAutCnl,jdbcType=CHAR}, #{trxAutDat,jdbcType=DECIMAL}, 
+      #{trxAutTim,jdbcType=DECIMAL}, #{trxAutSeq,jdbcType=CHAR}, #{trxAutRut,jdbcType=CHAR}, 
+      #{trxAutCn2,jdbcType=CHAR}, #{trxAutDa2,jdbcType=DECIMAL}, #{trxAutTi2,jdbcType=DECIMAL}, 
+      #{trxAutSe2,jdbcType=CHAR}, #{trxAutRu2,jdbcType=CHAR}, #{trxCmtSts,jdbcType=CHAR}, 
+      #{trxCmtCod,jdbcType=CHAR}, #{trxPtnNbr,jdbcType=CHAR}, #{trxSpc120,jdbcType=CHAR}, 
+      #{trxReqSeq,jdbcType=CHAR}, #{trxDtbNam,jdbcType=CHAR}, #{trxMntDat,jdbcType=DECIMAL}, 
+      #{trxMntTim,jdbcType=DECIMAL}, #{trxRcdVer,jdbcType=DECIMAL}, #{trxRcdSts,jdbcType=CHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.plyaljx.entity.PtnTrxDat">
+    insert into ptn_trx_dat
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="trxTrxSeq != null">
+        TRX_TRX_SEQ,
+      </if>
+      <if test="trxTrxDat != null">
+        TRX_TRX_DAT,
+      </if>
+      <if test="trxTrxTim != null">
+        TRX_TRX_TIM,
+      </if>
+      <if test="trxMchNbr != null">
+        TRX_MCH_NBR,
+      </if>
+      <if test="trxMchOut != null">
+        TRX_MCH_OUT,
+      </if>
+      <if test="trxMchSub != null">
+        TRX_MCH_SUB,
+      </if>
+      <if test="trxCtfTyp != null">
+        TRX_CTF_TYP,
+      </if>
+      <if test="trxCtfNbr != null">
+        TRX_CTF_NBR,
+      </if>
+      <if test="trxCurNbr != null">
+        TRX_CUR_NBR,
+      </if>
+      <if test="trxCtfNam != null">
+        TRX_CTF_NAM,
+      </if>
+      <if test="trxOrdDat != null">
+        TRX_ORD_DAT,
+      </if>
+      <if test="trxOrdTim != null">
+        TRX_ORD_TIM,
+      </if>
+      <if test="trxOrdSeq != null">
+        TRX_ORD_SEQ,
+      </if>
+      <if test="trxOrdAmt != null">
+        TRX_ORD_AMT,
+      </if>
+      <if test="trxOrdRsv != null">
+        TRX_ORD_RSV,
+      </if>
+      <if test="trxCadNbr != null">
+        TRX_CAD_NBR,
+      </if>
+      <if test="trxCadBkn != null">
+        TRX_CAD_BKN,
+      </if>
+      <if test="trxCadDbt != null">
+        TRX_CAD_DBT,
+      </if>
+      <if test="trxCadAct != null">
+        TRX_CAD_ACT,
+      </if>
+      <if test="trxTrxCcy != null">
+        TRX_TRX_CCY,
+      </if>
+      <if test="trxTrxAmt != null">
+        TRX_TRX_AMT,
+      </if>
+      <if test="trxTrxSys != null">
+        TRX_TRX_SYS,
+      </if>
+      <if test="trxTrxScn != null">
+        TRX_TRX_SCN,
+      </if>
+      <if test="trxTrxTyp != null">
+        TRX_TRX_TYP,
+      </if>
+      <if test="trxTrxSts != null">
+        TRX_TRX_STS,
+      </if>
+      <if test="trxTrxEcd != null">
+        TRX_TRX_ECD,
+      </if>
+      <if test="trxTrxRsq != null">
+        TRX_TRX_RSQ,
+      </if>
+      <if test="trxTrxRpn != null">
+        TRX_TRX_RPN,
+      </if>
+      <if test="trxTrxNtf != null">
+        TRX_TRX_NTF,
+      </if>
+      <if test="trxTrxMrc != null">
+        TRX_TRX_MRC,
+      </if>
+      <if test="trxTrxApd != null">
+        TRX_TRX_APD,
+      </if>
+      <if test="trxRfaAmt != null">
+        TRX_RFA_AMT,
+      </if>
+      <if test="trxRfaSum != null">
+        TRX_RFA_SUM,
+      </if>
+      <if test="trxRfaSeq != null">
+        TRX_RFA_SEQ,
+      </if>
+      <if test="trxRfaNbr != null">
+        TRX_RFA_NBR,
+      </if>
+      <if test="trxRfaMod != null">
+        TRX_RFA_MOD,
+      </if>
+      <if test="trxRfaMsg != null">
+        TRX_RFA_MSG,
+      </if>
+      <if test="trxRfaClr != null">
+        TRX_RFA_CLR,
+      </if>
+      <if test="trxRfaDsc != null">
+        TRX_RFA_DSC,
+      </if>
+      <if test="trxRfaCpn != null">
+        TRX_RFA_CPN,
+      </if>
+      <if test="trxRfaItg != null">
+        TRX_RFA_ITG,
+      </if>
+      <if test="trxRfaFee != null">
+        TRX_RFA_FEE,
+      </if>
+      <if test="trxRfaMdl != null">
+        TRX_RFA_MDL,
+      </if>
+      <if test="trxClrIns != null">
+        TRX_CLR_INS,
+      </if>
+      <if test="trxClrDat != null">
+        TRX_CLR_DAT,
+      </if>
+      <if test="trxClrBbk != null">
+        TRX_CLR_BBK,
+      </if>
+      <if test="trxClrBrn != null">
+        TRX_CLR_BRN,
+      </if>
+      <if test="trxClrPmt != null">
+        TRX_CLR_PMT,
+      </if>
+      <if test="trxClrAmt != null">
+        TRX_CLR_AMT,
+      </if>
+      <if test="trxFeeAmt != null">
+        TRX_FEE_AMT,
+      </if>
+      <if test="trxPwdIgn != null">
+        TRX_PWD_IGN,
+      </if>
+      <if test="trxCpnPnb != null">
+        TRX_CPN_PNB,
+      </if>
+      <if test="trxCpnGrp != null">
+        TRX_CPN_GRP,
+      </if>
+      <if test="trxCpnGnb != null">
+        TRX_CPN_GNB,
+      </if>
+      <if test="trxCpnNbr != null">
+        TRX_CPN_NBR,
+      </if>
+      <if test="trxCpnAmt != null">
+        TRX_CPN_AMT,
+      </if>
+      <if test="trxDscPnb != null">
+        TRX_DSC_PNB,
+      </if>
+      <if test="trxDscGrp != null">
+        TRX_DSC_GRP,
+      </if>
+      <if test="trxDscGnb != null">
+        TRX_DSC_GNB,
+      </if>
+      <if test="trxDscAmt != null">
+        TRX_DSC_AMT,
+      </if>
+      <if test="trxItgAmt != null">
+        TRX_ITG_AMT,
+      </if>
+      <if test="trxAutCnl != null">
+        TRX_AUT_CNL,
+      </if>
+      <if test="trxAutDat != null">
+        TRX_AUT_DAT,
+      </if>
+      <if test="trxAutTim != null">
+        TRX_AUT_TIM,
+      </if>
+      <if test="trxAutSeq != null">
+        TRX_AUT_SEQ,
+      </if>
+      <if test="trxAutRut != null">
+        TRX_AUT_RUT,
+      </if>
+      <if test="trxAutCn2 != null">
+        TRX_AUT_CN2,
+      </if>
+      <if test="trxAutDa2 != null">
+        TRX_AUT_DA2,
+      </if>
+      <if test="trxAutTi2 != null">
+        TRX_AUT_TI2,
+      </if>
+      <if test="trxAutSe2 != null">
+        TRX_AUT_SE2,
+      </if>
+      <if test="trxAutRu2 != null">
+        TRX_AUT_RU2,
+      </if>
+      <if test="trxCmtSts != null">
+        TRX_CMT_STS,
+      </if>
+      <if test="trxCmtCod != null">
+        TRX_CMT_COD,
+      </if>
+      <if test="trxPtnNbr != null">
+        TRX_PTN_NBR,
+      </if>
+      <if test="trxSpc120 != null">
+        TRX_SPC_120,
+      </if>
+      <if test="trxReqSeq != null">
+        TRX_REQ_SEQ,
+      </if>
+      <if test="trxDtbNam != null">
+        TRX_DTB_NAM,
+      </if>
+      <if test="trxMntDat != null">
+        TRX_MNT_DAT,
+      </if>
+      <if test="trxMntTim != null">
+        TRX_MNT_TIM,
+      </if>
+      <if test="trxRcdVer != null">
+        TRX_RCD_VER,
+      </if>
+      <if test="trxRcdSts != null">
+        TRX_RCD_STS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="trxTrxSeq != null">
+        #{trxTrxSeq,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxDat != null">
+        #{trxTrxDat,jdbcType=DECIMAL},
+      </if>
+      <if test="trxTrxTim != null">
+        #{trxTrxTim,jdbcType=DECIMAL},
+      </if>
+      <if test="trxMchNbr != null">
+        #{trxMchNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxMchOut != null">
+        #{trxMchOut,jdbcType=CHAR},
+      </if>
+      <if test="trxMchSub != null">
+        #{trxMchSub,jdbcType=CHAR},
+      </if>
+      <if test="trxCtfTyp != null">
+        #{trxCtfTyp,jdbcType=CHAR},
+      </if>
+      <if test="trxCtfNbr != null">
+        #{trxCtfNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxCurNbr != null">
+        #{trxCurNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxCtfNam != null">
+        #{trxCtfNam,jdbcType=CHAR},
+      </if>
+      <if test="trxOrdDat != null">
+        #{trxOrdDat,jdbcType=DECIMAL},
+      </if>
+      <if test="trxOrdTim != null">
+        #{trxOrdTim,jdbcType=DECIMAL},
+      </if>
+      <if test="trxOrdSeq != null">
+        #{trxOrdSeq,jdbcType=CHAR},
+      </if>
+      <if test="trxOrdAmt != null">
+        #{trxOrdAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxOrdRsv != null">
+        #{trxOrdRsv,jdbcType=VARCHAR},
+      </if>
+      <if test="trxCadNbr != null">
+        #{trxCadNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxCadBkn != null">
+        #{trxCadBkn,jdbcType=CHAR},
+      </if>
+      <if test="trxCadDbt != null">
+        #{trxCadDbt,jdbcType=CHAR},
+      </if>
+      <if test="trxCadAct != null">
+        #{trxCadAct,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxCcy != null">
+        #{trxTrxCcy,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxAmt != null">
+        #{trxTrxAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxTrxSys != null">
+        #{trxTrxSys,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxScn != null">
+        #{trxTrxScn,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxTyp != null">
+        #{trxTrxTyp,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxSts != null">
+        #{trxTrxSts,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxEcd != null">
+        #{trxTrxEcd,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxRsq != null">
+        #{trxTrxRsq,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxRpn != null">
+        #{trxTrxRpn,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxNtf != null">
+        #{trxTrxNtf,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxMrc != null">
+        #{trxTrxMrc,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxApd != null">
+        #{trxTrxApd,jdbcType=CHAR},
+      </if>
+      <if test="trxRfaAmt != null">
+        #{trxRfaAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaSum != null">
+        #{trxRfaSum,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaSeq != null">
+        #{trxRfaSeq,jdbcType=CHAR},
+      </if>
+      <if test="trxRfaNbr != null">
+        #{trxRfaNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxRfaMod != null">
+        #{trxRfaMod,jdbcType=CHAR},
+      </if>
+      <if test="trxRfaMsg != null">
+        #{trxRfaMsg,jdbcType=CHAR},
+      </if>
+      <if test="trxRfaClr != null">
+        #{trxRfaClr,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaDsc != null">
+        #{trxRfaDsc,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaCpn != null">
+        #{trxRfaCpn,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaItg != null">
+        #{trxRfaItg,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaFee != null">
+        #{trxRfaFee,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaMdl != null">
+        #{trxRfaMdl,jdbcType=CHAR},
+      </if>
+      <if test="trxClrIns != null">
+        #{trxClrIns,jdbcType=CHAR},
+      </if>
+      <if test="trxClrDat != null">
+        #{trxClrDat,jdbcType=DECIMAL},
+      </if>
+      <if test="trxClrBbk != null">
+        #{trxClrBbk,jdbcType=CHAR},
+      </if>
+      <if test="trxClrBrn != null">
+        #{trxClrBrn,jdbcType=CHAR},
+      </if>
+      <if test="trxClrPmt != null">
+        #{trxClrPmt,jdbcType=CHAR},
+      </if>
+      <if test="trxClrAmt != null">
+        #{trxClrAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxFeeAmt != null">
+        #{trxFeeAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxPwdIgn != null">
+        #{trxPwdIgn,jdbcType=CHAR},
+      </if>
+      <if test="trxCpnPnb != null">
+        #{trxCpnPnb,jdbcType=CHAR},
+      </if>
+      <if test="trxCpnGrp != null">
+        #{trxCpnGrp,jdbcType=CHAR},
+      </if>
+      <if test="trxCpnGnb != null">
+        #{trxCpnGnb,jdbcType=CHAR},
+      </if>
+      <if test="trxCpnNbr != null">
+        #{trxCpnNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxCpnAmt != null">
+        #{trxCpnAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxDscPnb != null">
+        #{trxDscPnb,jdbcType=CHAR},
+      </if>
+      <if test="trxDscGrp != null">
+        #{trxDscGrp,jdbcType=CHAR},
+      </if>
+      <if test="trxDscGnb != null">
+        #{trxDscGnb,jdbcType=CHAR},
+      </if>
+      <if test="trxDscAmt != null">
+        #{trxDscAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxItgAmt != null">
+        #{trxItgAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxAutCnl != null">
+        #{trxAutCnl,jdbcType=CHAR},
+      </if>
+      <if test="trxAutDat != null">
+        #{trxAutDat,jdbcType=DECIMAL},
+      </if>
+      <if test="trxAutTim != null">
+        #{trxAutTim,jdbcType=DECIMAL},
+      </if>
+      <if test="trxAutSeq != null">
+        #{trxAutSeq,jdbcType=CHAR},
+      </if>
+      <if test="trxAutRut != null">
+        #{trxAutRut,jdbcType=CHAR},
+      </if>
+      <if test="trxAutCn2 != null">
+        #{trxAutCn2,jdbcType=CHAR},
+      </if>
+      <if test="trxAutDa2 != null">
+        #{trxAutDa2,jdbcType=DECIMAL},
+      </if>
+      <if test="trxAutTi2 != null">
+        #{trxAutTi2,jdbcType=DECIMAL},
+      </if>
+      <if test="trxAutSe2 != null">
+        #{trxAutSe2,jdbcType=CHAR},
+      </if>
+      <if test="trxAutRu2 != null">
+        #{trxAutRu2,jdbcType=CHAR},
+      </if>
+      <if test="trxCmtSts != null">
+        #{trxCmtSts,jdbcType=CHAR},
+      </if>
+      <if test="trxCmtCod != null">
+        #{trxCmtCod,jdbcType=CHAR},
+      </if>
+      <if test="trxPtnNbr != null">
+        #{trxPtnNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxSpc120 != null">
+        #{trxSpc120,jdbcType=CHAR},
+      </if>
+      <if test="trxReqSeq != null">
+        #{trxReqSeq,jdbcType=CHAR},
+      </if>
+      <if test="trxDtbNam != null">
+        #{trxDtbNam,jdbcType=CHAR},
+      </if>
+      <if test="trxMntDat != null">
+        #{trxMntDat,jdbcType=DECIMAL},
+      </if>
+      <if test="trxMntTim != null">
+        #{trxMntTim,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRcdVer != null">
+        #{trxRcdVer,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRcdSts != null">
+        #{trxRcdSts,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.plyaljx.entity.PtnTrxDat">
+    update ptn_trx_dat
+    <set>
+      <if test="trxTrxDat != null">
+        TRX_TRX_DAT = #{trxTrxDat,jdbcType=DECIMAL},
+      </if>
+      <if test="trxTrxTim != null">
+        TRX_TRX_TIM = #{trxTrxTim,jdbcType=DECIMAL},
+      </if>
+      <if test="trxMchNbr != null">
+        TRX_MCH_NBR = #{trxMchNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxMchOut != null">
+        TRX_MCH_OUT = #{trxMchOut,jdbcType=CHAR},
+      </if>
+      <if test="trxMchSub != null">
+        TRX_MCH_SUB = #{trxMchSub,jdbcType=CHAR},
+      </if>
+      <if test="trxCtfTyp != null">
+        TRX_CTF_TYP = #{trxCtfTyp,jdbcType=CHAR},
+      </if>
+      <if test="trxCtfNbr != null">
+        TRX_CTF_NBR = #{trxCtfNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxCurNbr != null">
+        TRX_CUR_NBR = #{trxCurNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxCtfNam != null">
+        TRX_CTF_NAM = #{trxCtfNam,jdbcType=CHAR},
+      </if>
+      <if test="trxOrdDat != null">
+        TRX_ORD_DAT = #{trxOrdDat,jdbcType=DECIMAL},
+      </if>
+      <if test="trxOrdTim != null">
+        TRX_ORD_TIM = #{trxOrdTim,jdbcType=DECIMAL},
+      </if>
+      <if test="trxOrdSeq != null">
+        TRX_ORD_SEQ = #{trxOrdSeq,jdbcType=CHAR},
+      </if>
+      <if test="trxOrdAmt != null">
+        TRX_ORD_AMT = #{trxOrdAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxOrdRsv != null">
+        TRX_ORD_RSV = #{trxOrdRsv,jdbcType=VARCHAR},
+      </if>
+      <if test="trxCadNbr != null">
+        TRX_CAD_NBR = #{trxCadNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxCadBkn != null">
+        TRX_CAD_BKN = #{trxCadBkn,jdbcType=CHAR},
+      </if>
+      <if test="trxCadDbt != null">
+        TRX_CAD_DBT = #{trxCadDbt,jdbcType=CHAR},
+      </if>
+      <if test="trxCadAct != null">
+        TRX_CAD_ACT = #{trxCadAct,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxCcy != null">
+        TRX_TRX_CCY = #{trxTrxCcy,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxAmt != null">
+        TRX_TRX_AMT = #{trxTrxAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxTrxSys != null">
+        TRX_TRX_SYS = #{trxTrxSys,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxScn != null">
+        TRX_TRX_SCN = #{trxTrxScn,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxTyp != null">
+        TRX_TRX_TYP = #{trxTrxTyp,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxSts != null">
+        TRX_TRX_STS = #{trxTrxSts,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxEcd != null">
+        TRX_TRX_ECD = #{trxTrxEcd,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxRsq != null">
+        TRX_TRX_RSQ = #{trxTrxRsq,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxRpn != null">
+        TRX_TRX_RPN = #{trxTrxRpn,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxNtf != null">
+        TRX_TRX_NTF = #{trxTrxNtf,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxMrc != null">
+        TRX_TRX_MRC = #{trxTrxMrc,jdbcType=CHAR},
+      </if>
+      <if test="trxTrxApd != null">
+        TRX_TRX_APD = #{trxTrxApd,jdbcType=CHAR},
+      </if>
+      <if test="trxRfaAmt != null">
+        TRX_RFA_AMT = #{trxRfaAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaSum != null">
+        TRX_RFA_SUM = #{trxRfaSum,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaSeq != null">
+        TRX_RFA_SEQ = #{trxRfaSeq,jdbcType=CHAR},
+      </if>
+      <if test="trxRfaNbr != null">
+        TRX_RFA_NBR = #{trxRfaNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxRfaMod != null">
+        TRX_RFA_MOD = #{trxRfaMod,jdbcType=CHAR},
+      </if>
+      <if test="trxRfaMsg != null">
+        TRX_RFA_MSG = #{trxRfaMsg,jdbcType=CHAR},
+      </if>
+      <if test="trxRfaClr != null">
+        TRX_RFA_CLR = #{trxRfaClr,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaDsc != null">
+        TRX_RFA_DSC = #{trxRfaDsc,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaCpn != null">
+        TRX_RFA_CPN = #{trxRfaCpn,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaItg != null">
+        TRX_RFA_ITG = #{trxRfaItg,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaFee != null">
+        TRX_RFA_FEE = #{trxRfaFee,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRfaMdl != null">
+        TRX_RFA_MDL = #{trxRfaMdl,jdbcType=CHAR},
+      </if>
+      <if test="trxClrIns != null">
+        TRX_CLR_INS = #{trxClrIns,jdbcType=CHAR},
+      </if>
+      <if test="trxClrDat != null">
+        TRX_CLR_DAT = #{trxClrDat,jdbcType=DECIMAL},
+      </if>
+      <if test="trxClrBbk != null">
+        TRX_CLR_BBK = #{trxClrBbk,jdbcType=CHAR},
+      </if>
+      <if test="trxClrBrn != null">
+        TRX_CLR_BRN = #{trxClrBrn,jdbcType=CHAR},
+      </if>
+      <if test="trxClrPmt != null">
+        TRX_CLR_PMT = #{trxClrPmt,jdbcType=CHAR},
+      </if>
+      <if test="trxClrAmt != null">
+        TRX_CLR_AMT = #{trxClrAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxFeeAmt != null">
+        TRX_FEE_AMT = #{trxFeeAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxPwdIgn != null">
+        TRX_PWD_IGN = #{trxPwdIgn,jdbcType=CHAR},
+      </if>
+      <if test="trxCpnPnb != null">
+        TRX_CPN_PNB = #{trxCpnPnb,jdbcType=CHAR},
+      </if>
+      <if test="trxCpnGrp != null">
+        TRX_CPN_GRP = #{trxCpnGrp,jdbcType=CHAR},
+      </if>
+      <if test="trxCpnGnb != null">
+        TRX_CPN_GNB = #{trxCpnGnb,jdbcType=CHAR},
+      </if>
+      <if test="trxCpnNbr != null">
+        TRX_CPN_NBR = #{trxCpnNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxCpnAmt != null">
+        TRX_CPN_AMT = #{trxCpnAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxDscPnb != null">
+        TRX_DSC_PNB = #{trxDscPnb,jdbcType=CHAR},
+      </if>
+      <if test="trxDscGrp != null">
+        TRX_DSC_GRP = #{trxDscGrp,jdbcType=CHAR},
+      </if>
+      <if test="trxDscGnb != null">
+        TRX_DSC_GNB = #{trxDscGnb,jdbcType=CHAR},
+      </if>
+      <if test="trxDscAmt != null">
+        TRX_DSC_AMT = #{trxDscAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxItgAmt != null">
+        TRX_ITG_AMT = #{trxItgAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="trxAutCnl != null">
+        TRX_AUT_CNL = #{trxAutCnl,jdbcType=CHAR},
+      </if>
+      <if test="trxAutDat != null">
+        TRX_AUT_DAT = #{trxAutDat,jdbcType=DECIMAL},
+      </if>
+      <if test="trxAutTim != null">
+        TRX_AUT_TIM = #{trxAutTim,jdbcType=DECIMAL},
+      </if>
+      <if test="trxAutSeq != null">
+        TRX_AUT_SEQ = #{trxAutSeq,jdbcType=CHAR},
+      </if>
+      <if test="trxAutRut != null">
+        TRX_AUT_RUT = #{trxAutRut,jdbcType=CHAR},
+      </if>
+      <if test="trxAutCn2 != null">
+        TRX_AUT_CN2 = #{trxAutCn2,jdbcType=CHAR},
+      </if>
+      <if test="trxAutDa2 != null">
+        TRX_AUT_DA2 = #{trxAutDa2,jdbcType=DECIMAL},
+      </if>
+      <if test="trxAutTi2 != null">
+        TRX_AUT_TI2 = #{trxAutTi2,jdbcType=DECIMAL},
+      </if>
+      <if test="trxAutSe2 != null">
+        TRX_AUT_SE2 = #{trxAutSe2,jdbcType=CHAR},
+      </if>
+      <if test="trxAutRu2 != null">
+        TRX_AUT_RU2 = #{trxAutRu2,jdbcType=CHAR},
+      </if>
+      <if test="trxCmtSts != null">
+        TRX_CMT_STS = #{trxCmtSts,jdbcType=CHAR},
+      </if>
+      <if test="trxCmtCod != null">
+        TRX_CMT_COD = #{trxCmtCod,jdbcType=CHAR},
+      </if>
+      <if test="trxPtnNbr != null">
+        TRX_PTN_NBR = #{trxPtnNbr,jdbcType=CHAR},
+      </if>
+      <if test="trxSpc120 != null">
+        TRX_SPC_120 = #{trxSpc120,jdbcType=CHAR},
+      </if>
+      <if test="trxReqSeq != null">
+        TRX_REQ_SEQ = #{trxReqSeq,jdbcType=CHAR},
+      </if>
+      <if test="trxDtbNam != null">
+        TRX_DTB_NAM = #{trxDtbNam,jdbcType=CHAR},
+      </if>
+      <if test="trxMntDat != null">
+        TRX_MNT_DAT = #{trxMntDat,jdbcType=DECIMAL},
+      </if>
+      <if test="trxMntTim != null">
+        TRX_MNT_TIM = #{trxMntTim,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRcdVer != null">
+        TRX_RCD_VER = #{trxRcdVer,jdbcType=DECIMAL},
+      </if>
+      <if test="trxRcdSts != null">
+        TRX_RCD_STS = #{trxRcdSts,jdbcType=CHAR},
+      </if>
+    </set>
+    where TRX_TRX_SEQ = #{trxTrxSeq,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.plyaljx.entity.PtnTrxDat">
+    update ptn_trx_dat
+    set TRX_TRX_DAT = #{trxTrxDat,jdbcType=DECIMAL},
+      TRX_TRX_TIM = #{trxTrxTim,jdbcType=DECIMAL},
+      TRX_MCH_NBR = #{trxMchNbr,jdbcType=CHAR},
+      TRX_MCH_OUT = #{trxMchOut,jdbcType=CHAR},
+      TRX_MCH_SUB = #{trxMchSub,jdbcType=CHAR},
+      TRX_CTF_TYP = #{trxCtfTyp,jdbcType=CHAR},
+      TRX_CTF_NBR = #{trxCtfNbr,jdbcType=CHAR},
+      TRX_CUR_NBR = #{trxCurNbr,jdbcType=CHAR},
+      TRX_CTF_NAM = #{trxCtfNam,jdbcType=CHAR},
+      TRX_ORD_DAT = #{trxOrdDat,jdbcType=DECIMAL},
+      TRX_ORD_TIM = #{trxOrdTim,jdbcType=DECIMAL},
+      TRX_ORD_SEQ = #{trxOrdSeq,jdbcType=CHAR},
+      TRX_ORD_AMT = #{trxOrdAmt,jdbcType=DECIMAL},
+      TRX_ORD_RSV = #{trxOrdRsv,jdbcType=VARCHAR},
+      TRX_CAD_NBR = #{trxCadNbr,jdbcType=CHAR},
+      TRX_CAD_BKN = #{trxCadBkn,jdbcType=CHAR},
+      TRX_CAD_DBT = #{trxCadDbt,jdbcType=CHAR},
+      TRX_CAD_ACT = #{trxCadAct,jdbcType=CHAR},
+      TRX_TRX_CCY = #{trxTrxCcy,jdbcType=CHAR},
+      TRX_TRX_AMT = #{trxTrxAmt,jdbcType=DECIMAL},
+      TRX_TRX_SYS = #{trxTrxSys,jdbcType=CHAR},
+      TRX_TRX_SCN = #{trxTrxScn,jdbcType=CHAR},
+      TRX_TRX_TYP = #{trxTrxTyp,jdbcType=CHAR},
+      TRX_TRX_STS = #{trxTrxSts,jdbcType=CHAR},
+      TRX_TRX_ECD = #{trxTrxEcd,jdbcType=CHAR},
+      TRX_TRX_RSQ = #{trxTrxRsq,jdbcType=CHAR},
+      TRX_TRX_RPN = #{trxTrxRpn,jdbcType=CHAR},
+      TRX_TRX_NTF = #{trxTrxNtf,jdbcType=CHAR},
+      TRX_TRX_MRC = #{trxTrxMrc,jdbcType=CHAR},
+      TRX_TRX_APD = #{trxTrxApd,jdbcType=CHAR},
+      TRX_RFA_AMT = #{trxRfaAmt,jdbcType=DECIMAL},
+      TRX_RFA_SUM = #{trxRfaSum,jdbcType=DECIMAL},
+      TRX_RFA_SEQ = #{trxRfaSeq,jdbcType=CHAR},
+      TRX_RFA_NBR = #{trxRfaNbr,jdbcType=CHAR},
+      TRX_RFA_MOD = #{trxRfaMod,jdbcType=CHAR},
+      TRX_RFA_MSG = #{trxRfaMsg,jdbcType=CHAR},
+      TRX_RFA_CLR = #{trxRfaClr,jdbcType=DECIMAL},
+      TRX_RFA_DSC = #{trxRfaDsc,jdbcType=DECIMAL},
+      TRX_RFA_CPN = #{trxRfaCpn,jdbcType=DECIMAL},
+      TRX_RFA_ITG = #{trxRfaItg,jdbcType=DECIMAL},
+      TRX_RFA_FEE = #{trxRfaFee,jdbcType=DECIMAL},
+      TRX_RFA_MDL = #{trxRfaMdl,jdbcType=CHAR},
+      TRX_CLR_INS = #{trxClrIns,jdbcType=CHAR},
+      TRX_CLR_DAT = #{trxClrDat,jdbcType=DECIMAL},
+      TRX_CLR_BBK = #{trxClrBbk,jdbcType=CHAR},
+      TRX_CLR_BRN = #{trxClrBrn,jdbcType=CHAR},
+      TRX_CLR_PMT = #{trxClrPmt,jdbcType=CHAR},
+      TRX_CLR_AMT = #{trxClrAmt,jdbcType=DECIMAL},
+      TRX_FEE_AMT = #{trxFeeAmt,jdbcType=DECIMAL},
+      TRX_PWD_IGN = #{trxPwdIgn,jdbcType=CHAR},
+      TRX_CPN_PNB = #{trxCpnPnb,jdbcType=CHAR},
+      TRX_CPN_GRP = #{trxCpnGrp,jdbcType=CHAR},
+      TRX_CPN_GNB = #{trxCpnGnb,jdbcType=CHAR},
+      TRX_CPN_NBR = #{trxCpnNbr,jdbcType=CHAR},
+      TRX_CPN_AMT = #{trxCpnAmt,jdbcType=DECIMAL},
+      TRX_DSC_PNB = #{trxDscPnb,jdbcType=CHAR},
+      TRX_DSC_GRP = #{trxDscGrp,jdbcType=CHAR},
+      TRX_DSC_GNB = #{trxDscGnb,jdbcType=CHAR},
+      TRX_DSC_AMT = #{trxDscAmt,jdbcType=DECIMAL},
+      TRX_ITG_AMT = #{trxItgAmt,jdbcType=DECIMAL},
+      TRX_AUT_CNL = #{trxAutCnl,jdbcType=CHAR},
+      TRX_AUT_DAT = #{trxAutDat,jdbcType=DECIMAL},
+      TRX_AUT_TIM = #{trxAutTim,jdbcType=DECIMAL},
+      TRX_AUT_SEQ = #{trxAutSeq,jdbcType=CHAR},
+      TRX_AUT_RUT = #{trxAutRut,jdbcType=CHAR},
+      TRX_AUT_CN2 = #{trxAutCn2,jdbcType=CHAR},
+      TRX_AUT_DA2 = #{trxAutDa2,jdbcType=DECIMAL},
+      TRX_AUT_TI2 = #{trxAutTi2,jdbcType=DECIMAL},
+      TRX_AUT_SE2 = #{trxAutSe2,jdbcType=CHAR},
+      TRX_AUT_RU2 = #{trxAutRu2,jdbcType=CHAR},
+      TRX_CMT_STS = #{trxCmtSts,jdbcType=CHAR},
+      TRX_CMT_COD = #{trxCmtCod,jdbcType=CHAR},
+      TRX_PTN_NBR = #{trxPtnNbr,jdbcType=CHAR},
+      TRX_SPC_120 = #{trxSpc120,jdbcType=CHAR},
+      TRX_REQ_SEQ = #{trxReqSeq,jdbcType=CHAR},
+      TRX_DTB_NAM = #{trxDtbNam,jdbcType=CHAR},
+      TRX_MNT_DAT = #{trxMntDat,jdbcType=DECIMAL},
+      TRX_MNT_TIM = #{trxMntTim,jdbcType=DECIMAL},
+      TRX_RCD_VER = #{trxRcdVer,jdbcType=DECIMAL},
+      TRX_RCD_STS = #{trxRcdSts,jdbcType=CHAR}
+    where TRX_TRX_SEQ = #{trxTrxSeq,jdbcType=CHAR}
+  </update>
+</mapper>

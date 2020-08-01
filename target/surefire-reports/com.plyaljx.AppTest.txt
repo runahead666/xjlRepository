@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.plyaljx.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.24 s <<< FAILURE! - in com.plyaljx.AppTest
+deptFindByDeptnoTest(com.plyaljx.AppTest)  Time elapsed: 1.084 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.plyaljx.AppTest.deptFindByDeptnoTest(AppTest.java:37)
+
